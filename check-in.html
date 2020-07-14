@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="icon" href="img/Icon58.png">
+    <title>学生进出校管理系统</title>
+    <link href="css/app.87d98219.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div id="app">
+      <div style="height: 3.2rem; width: 100%; background-color: #00409a; padding: 1rem;">
+          <img src="img/leftarrow.png" style="height: 1.2rem;float: left;" onclick="setInfo()">
+          <div style="float:left;color: white;font-size: 1rem;font-weight: 600;margin-left: 10%">学生进出校通行证</div>
+          <img src="img/dot.png" style="height: 1.2rem;float: right;" onclick="setInfo()">
+      </div>
+      <div class="wrapper">
+        
+        <div style="position: relative;">
+          <img src="img/xyk.56d8a335.png" style="width: 100%; height: 100%;">
+          <div class="dept" id="dept">电子信息与电气工程学院</div></div>
+        <div class="content">
+          <div class="user">
+            <img src="data:image/jpeg;base64,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">
+            <div class="user-info">
+              <div id="user-name"></div>
+              <div class="user-no" id="user-no"></div></div>
+          </div>
+          <div class="audit">
+            <!---->
+            <div id="date"></div>
+            <div id="campus"></div>
+            <!---->
+            <div class="audit-status success">审核通过</div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; padding-top: 1.5rem;">
+          <div class="circle-btn" onclick="changeBtnStatus()">
+            <div class="crust success-bk-air">
+              <div class="mantle success-bk-gradient">
+                <div class="spacing">
+                  <div class="core success-bk">
+                    <div style="font-weight: 300;" id="circle-status">出校</div>
+                    <div>PASSED</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span  id="msg" style="color: #bebcba; border: 1px solid #bebcba;padding: .2rem .8rem;border-radius: 1rem;box-shadow: -1px 0 2px #bebcba, 1px 0 5px #bebcba, 0 -1px 5px #bebcba, 0 1px 5px #bebcba">此状态保持10分钟，请尽快出校</span>
+          <div class="time" id="time"></div></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+        function padLeft(number) {
+            var str = number.toString();
+            if (str.length == 1) {
+                return ("0" + str);
+            } else {
+                return str;
+            }
+        }
+        if (!localStorage.getItem("username") || !localStorage.getItem("userno") || localStorage.getItem("username") == "" || localStorage.getItem("userno") == "") {
+            alert("请先提供你的姓名和学号");
+            setInfo();
+            alert("提示：如果要更改信息可以点击顶部的箭头或者点点");
+        }
+        // 设置用户名
+        var username = document.getElementById("user-name");
+        username.innerHTML = localStorage.getItem("username");
+        // 设置学号
+        var userno = document.getElementById("user-no");
+        userno.innerHTML = localStorage.getItem("userno");
+        // 设置进出校时间
+        var date = new Date();
+        var today = document.getElementById("date");
+        today.innerHTML = date.getMonth() + 1 + "月" + date.getDate() + "号";
+        // 设置校区
+        var campus = document.getElementById("campus");
+        campus.innerHTML = "闵行校区";
+
+        setInterval(function() {
+            date = new Date();
+            var hour = padLeft(date.getHours());
+            var minute = padLeft(date.getMinutes());
+            var seconds = padLeft(date.getSeconds());
+            var time = document.getElementById('time');
+            time.innerHTML = hour + ":" + minute + ":" + seconds;
+        },
+        1000);
+
+        function changeBtnStatus() {
+            var status = document.getElementById('circle-status');
+            var msg = document.getElementById('msg');
+            if (status.innerHTML == "进校") {
+                status.innerHTML = "出校";
+                msg.innerHTML = "此状态保持10分钟，请尽快出校";
+            } else {
+                status.innerHTML = "进校";
+                msg.innerHTML = "此状态保持30分钟，请尽快进校";
+            }
+        }
+
+        function setInfo() {
+            localStorage.setItem("username", prompt("请输入你的名字"));
+            localStorage.setItem("userno", prompt("请输入你的学号"));
+            window.location.reload();
+        }
+    </script>
+  </body>
+
+</html>
