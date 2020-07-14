@@ -62,17 +62,7 @@
                 return str;
             }
         }
-        if (!localStorage.getItem("username") || !localStorage.getItem("userno") || localStorage.getItem("username") == "" || localStorage.getItem("userno") == "") {
-            alert("请先提供你的姓名和学号");
-            setInfo();
-            alert("提示：如果要更改信息可以点击顶部的箭头或者点点；点击下方的圆形按钮可切换进出校状态");
-        }
-        // 设置用户名
-        var username = document.getElementById("user-name");
-        username.innerHTML = localStorage.getItem("username");
-        // 设置学号
-        var userno = document.getElementById("user-no");
-        userno.innerHTML = localStorage.getItem("userno");
+        
         // 设置进出校时间
         var date = new Date();
         var today = document.getElementById("date");
@@ -104,10 +94,23 @@
         }
 
         function setInfo() {
-            localStorage.setItem("username", prompt("请输入你的名字"));
-            localStorage.setItem("userno", prompt("请输入你的学号"));
+            localStorage.setItem("username", prompt("请输入你的名字（不想填就跳过）"));
+            localStorage.setItem("userno", prompt("请输入你的学号（不想填就跳过）"));
             window.location.reload();
         }
+
+        if (!localStorage.getItem("username") || !localStorage.getItem("userno") || localStorage.getItem("username") == "" || localStorage.getItem("userno") == "") {
+            alert("[FBI Warning] 需要提供姓名和学号来生成你的出入通行证，此信息**不会上传**服务器，仅限本地存储。点击状态栏的箭头或者竖点可以修改个人信息，点击下方的圆形按钮可切换进/出校状态");
+            setInfo();
+        } else if(localStorage.getItem("username") == "null" || localStorage.getItem("userno") == "null") {
+            alert("[FBI Warning] 当前个人信息为null，点击状态栏的箭头或者竖点可以修改个人信息");
+        }
+        // 设置用户名
+        var username = document.getElementById("user-name");
+        username.innerHTML = localStorage.getItem("username");
+        // 设置学号
+        var userno = document.getElementById("user-no");
+        userno.innerHTML = localStorage.getItem("userno");
     </script>
   </body>
 
